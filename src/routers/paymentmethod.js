@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const jwtValidator = require("../middlewares/passport");
 const joiValidator = require("../middlewares/joi");
-const { createPaymentMethodSchema } = require("../validations/paymentmethod.js");
+const { createPaymentMethodSchema } = require("../validations/paymentmethod");
 const { createPaymentMethod,getAll } = require("../controllers/paymentmethod");
 
 router.post("/", jwtValidator, joiValidator.body(createPaymentMethodSchema), createPaymentMethod);
