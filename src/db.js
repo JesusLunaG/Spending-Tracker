@@ -18,6 +18,8 @@ ExpenseCategory.belongsTo(User);
 
 // "El gasto de un usuario tiene una categoria"
 ExpenseIncurred.belongsTo(ExpenseCategory);
+// "El gasto de un usuario tiene un metodo de pago"
+ExpenseIncurred.belongsTo(PaymentMethod);
 
 
 exports.initDatabase = async function () {
